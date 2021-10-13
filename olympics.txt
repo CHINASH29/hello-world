@@ -1,0 +1,5 @@
+Name, Sex, Age
+Deep Das, Male, 19
+Triambak Goyal, Male, 21
+Sreejit Kar, Male, 20
+Aastha Narang, Male, 19

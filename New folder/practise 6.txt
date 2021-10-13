@@ -1,0 +1,124 @@
+1)greedy and lazy approach :
+-------------------------------------------------------------------
+Greddy approach :
+->greddy approach starts searching with a ' " 'and also search 
+the end of the quote and '"'.
+->it searches the start and end of the sequence match and returns 
+the value
+->A regular expression like /".+"/g (a quote, then something, 
+then the other quote)
+
+example :
+let regexp = /".+"/g;
+let str = 'hello! "pavan" is a good "boy" of all';
+alert( str.match(regexp) ); 
+
+output : "pavan" is a "good boy"
+
+-------------------------------------------------------------------
+
+Lazy approach :
+->lazy approach returns the value between opening and next closing pattern 
+while greddy approach retruns the value between opening(") ans the end closing
+sequence(")
+
+example :
+let regexp = /".+?"/g;
+let str = 'hello! "pavan" is a "good" boy';
+alert( str.match(regexp) ); 
+
+output :pavan ,good
+
+--------------------------------------------------------------------------------
+
+2)find and find all
+->find
+re.search()
+
+re.search() method either returns None (if the pattern doesn’t match), or a 
+re.MatchObject that contains information about the matching part of the string. 
+This method stops after the first match, so this is best suited for testing a regular
+expression more than extracting data.
+example :
+import re
+patterns=['pavan','good boy']
+text="pavan is a goodboy"
+for pattern in patterns:
+   print('looking for "{}" in "{}" ->'.format(pattern,text),end='') 
+   if re,search(pattern,text):
+      print("found a match!")
+   else:
+      print("no match")   
+
+output:
+looking for "pavan" in "pavan is a goodboy" ->found a match
+looking for "good boy" in "pavan is a goodboy"->no match
+->find all
+re.findall()
+Return all non-overlapping matches of pattern in string, as a list of strings. 
+The string is scanned left-to-right, and matches are returned in the order found.
+example:
+import re
+xx = "pavan66,is a good boy"
+r1=re.findall(r"^\w+",xx)
+print(r1)
+output : pavan66
+---------------------------------------------------------------------------------
+3)
+->find and compile
+With the re.compile() function we can compile pattern into pattern objects,
+which have methods for various operations such as searching for pattern matches
+or performing string substitutions. 
+using search() and recompile()
+example :
+import re
+name_check = re.compile(r"[^A-Za-zs.]")
+name = raw_input ("Please, enter your name: ")
+while name_check.search(name):
+    print "Please enter your name correctly!"
+    name = raw_input ("Please, enter your name: ")
+using findall() and recompile()
+import re
+phone_check = re.compile(r"[^0-9s-()]")
+phone = raw_input ("Please, enter your phone: ")
+while phone_check.search(phone):
+    print "Please enter your phone correctly!"
+    phone = raw_input ("Please, enter your phone: ")
+
+r1 = re.findall(r"^\w+",xx)//matches alpha numeric
+print(r1)
+
+---------------------------------------------------------------------
+
+4)grouping and quantification :
+->grouping:
+We group part of a regular expression by surrounding it with parentheses.
+This is how we apply operators to the complete group instead of a single character.
+
+import re
+s = 'pavan $% is a *&^ good boy'
+result = re.findall(r'(\w+)', s)
+print result
+
+output: ['pavan','is','a','good','boy']
+
+->quantification:
+----------------------------------------------------------------------
+
+5)metacharacter and character classes :
+this are the list of meta characters :
+. ^ $ * + ? { } [ ] \ | ( )
+meta charcters dont work inside the classes,At first we’ll look at [ and ]. They’re used 
+for indicating a character class,which is a set of characters that you want to match. 
+Characters can be listed individually, or a range of characters can be indicated by giving
+two characters and separating them by a '-'. For example, [xyz] will match any of the characters
+x, y, or z; this is the same as [x-z], which uses a range to express the same set of characters. 
+If you wanted to match only lowercase letters, your regex would be [a-z].
+
+Metacharacters don't work inside classes. For example, [abc] will match any of the characters′a′,′b′,′c′,or′
+
+'; '$' is a metacharacter, but inside a character class it is stripped of its special nature.
+
+If there is a '^' as the first character of a class it means all those characters that are NOT of this class;  For example, [^8] will match any character except '8'.
+
+Perhaps the most significant metacharacter is the backslash, \. It’s also used to escape all the metacharacters so you can still match them in patterns; for example, if you need to match a ] or \, you can precede them with a backslash to remove their special meaning: \] or \\.

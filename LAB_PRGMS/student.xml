@@ -1,0 +1,28 @@
+<student>
+    <child>
+        <ID name="ID">1841101</ID>
+        <sname name="Name">Aishwarya</sname>
+        <program name="Program">BCA</program>
+        <grade name="Grade">A</grade>
+    </child>
+
+    <child>
+        <ID name="ID">1841105</ID>
+        <sname name="Name">Anila</sname>
+        <program name="Program">BCA</program>
+        <grade name="Grade">A</grade>
+    </child>
+
+    <child>
+        <ID name="ID">1841122</ID>
+        <sname name="Name">Jonathan</sname>
+        <program name="Program">BCA</program>
+        <grade name="Grade">A</grade>
+    </child>
+
+    <employee>
+        <ID name="ID">1101</ID>
+        <ename name="Name">Prabhu</ename>
+        <dept name="Department">Mathematics</dept>
+    </employee>
+<child><ID name="ID">1841157</ID><sname name="Name">Tania</sname><program name="Program">BCA</program><grade name="Grade">A</grade></child><child><ID name="ID">1841102</ID><sname name="Name">Ajay</sname><program name="Program">BCA</program><grade name="Grade">A</grade></child><employee><ID name="ID">7654321</ID><ename name="Name">Vinay</ename><dept name="Department">Computer</dept></employee></student>

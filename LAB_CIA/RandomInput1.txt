@@ -1,0 +1,37 @@
+RANDOM TEXT FOR INPUT
+
+List of Students:
+Aastha Narang
+Divyan Fernando
+SKY 
+SHY 
+Vijaya
+Amma
+Anila
+
+List of emails:
+Aastha.narang@christuniversity.in
+divyan01fernando@gmail.com
+
+Students Participated in Hackathon:
+Amma 1st place
+Anila 2nd place
+
+Students Participated in Triathon:
+Vijaya 1st place & amma
+SHY 2nd place
+
+Rules:
+Rule1- there can be only 2 participants
+rule2- there should be one female compulsorily
+Subjects studied in PUC
+Physics electronics, computer science, statistics, chemistry mathematics and biology
+
+languages
+Kannada hindi english
+
+Total 7 participants participated in event.
+The Henry1 Decathon throphy goes to Vijaya & Amma.
+Participant Amma is the youngest participant of 7year old and wins the 1st place.
+
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+</head>
+
+<body class="new-body">
+    <form action="{% url 'login_info_admin' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="fullname" id="fullname" placeholder="Full Name" required>
+        <br>
+        <input type="email" name="loginid" id="loginid" placeholder="Email ID" required>
+        <br>
+        <input type="password" name="passid" id="passid" placeholder="Password" required>
+        <br>
+        <input type="submit" value="Login">
+    </form>
+</body>
+
+</html>
